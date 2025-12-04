@@ -1,0 +1,190 @@
+/* ------------------------------
+   Global Styles
+------------------------------ */
+
+body {
+  background-color: #F6E8EA;
+  color: #22181C;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Layout container (keeps text centered & clean) */
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------------------------------
+   Navigation Bar
+------------------------------ */
+
+nav {
+  background-color: #F45B69;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 3px solid #5A0001;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #F6E8EA;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav li a:hover {
+  color: #22181C;
+}
+
+/* ------------------------------
+   Headings
+------------------------------ */
+
+h1, h2, h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  color: #22181C;
+}
+
+h2 {
+  font-size: 24px;
+  color: #5A0001;
+}
+
+h3 {
+  font-size: 18px;
+  color: #22181C;
+  text-align: left;
+}
+
+/* ------------------------------
+   Paragraphs
+------------------------------ */
+
+p {
+  margin: 16px 0;
+}
+
+/* ------------------------------
+   Images
+------------------------------ */
+
+img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* ------------------------------
+   Hyperlinks
+------------------------------ */
+
+a {
+  color: #F13030;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #5A0001;
+}
+
+/* ------------------------------
+   Borders & Cards
+------------------------------ */
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #F45B69;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* ------------------------------
+   Figure Caption
+------------------------------ */
+
+figcaption {
+  font-size: 12px;
+  color: #5A0001;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #22181C;
+  font-size: 12px;
+}
+
+
+
+/* --------- SUSTAINABILITY PAGE --------- */
+/* --------- GLOSSARY --------- */
+
+
+.glossary-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+
+.glossary-item {
+   flex: 1 1 260px;
+   background: white;
+   border-radius: 14px;
+   padding: 16px;
+   border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.glossary-term {
+   font-weight: 600;
+   font-size: 14pt;
+   margin-bottom: 6px;
+}
+
+
+.glossary-definition {
+   font-size: 13pt;
+}
+/* --------- CHAPTER LABEL --------- */
+
+
+.chapter-label {
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 10pt;
+   color: var(--bright-red);
+   margin-bottom: 6px;
+}

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material Methods</title>
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- MAIN CONTENT WRAPPER -->
+<div class="container">
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <h1>Material Methods</h1>
+  </header>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Systems of Fashion: Code, Fibre, and Consequence</h1>
+    <p>
+      This page looks at sustainability not as a slogan but as a system:
+      the servers that recommend a dress to you, the trucks that move it, the
+      fibres that touch your skin, and the routes those fibres take when
+      you’re finished with them.
+    </p>
+    <p>
+      Fashion is estimated to be responsible for a significant share of global
+      greenhouse gas emissions and mounting textile waste. Instead of a list of
+      “dos and don’ts”, this page traces how digital tools accelerate trends,
+      how materials carry hidden water and carbon histories, and how brands are
+      experimenting with circular design.
+    </p>
+  </section>
+
+  <!-- CHAPTER 1: DIGITAL COST -->
+  <section>
+    <div class="chapter-label">chapter one</div>
+    <h2>The Invisible Digital Cost of Clothing</h2>
+
+    <div class="two-column">
+      <div class="text">
+        <p>
+          When people talk about “sustainable fashion”, most of the images we
+          see are analog: cotton fields, dye houses, cutting tables. But
+          between you and almost any garment sits a dense digital layer —
+          recommendation engines, image servers, content-delivery networks and
+          analytics dashboards that decide what appears on your screen.
+        </p>
+
+        <p>Every time you open a shopping app, a few things happen at once:</p>
+        <ul>
+          <li>High-resolution product photos and videos are streamed from servers.</li>
+          <li>Algorithms update which items to show you next based on your behaviour.</li>
+          <li>Analytics tools log clicks, scroll depth, wishlists and returns.</li>
+        </ul>
+
+        <p>
+          All of that computation runs in data centres that draw electricity
+          from power grids that are not always renewable. Luxury groups like
+          Kering and LVMH now include this digital footprint in their climate
+          strategies, setting science-based targets and shifting offices,
+          boutiques and parts of their digital infrastructure to renewable
+          energy. At the same time, the growth of e-commerce has increased
+          packaging waste and single-use plastics — from polybags to the
+          estimated tens of billions of plastic hangers used each year worldwide.
+        </p>
+
+        <div class="pull-quote">
+          A garment now carries two stories: one woven from cotton or polyester,
+          and one woven from code and infrastructure.
+        </div>
+
+        <p>
+          This chapter is a reminder that the “online” part of online shopping
+          is not weightless. Any serious attempt to decarbonise fashion has to
+          include choices about hosting, content design, image compression and
+          how many times a product photo needs to follow us around the internet.
+        </p>
+      </div>
+
+      <figure style="flex:1 1 320px;">
+        <img
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+          alt="Rows of computer servers glowing in a data center"
+          style="max-width:100%;border-radius:14px;"
+        />
+        <figcaption>
+          Data centres quietly power trend feeds, recommendations and
+          image-heavy product pages. Photo: Unsplash.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="two-column" style="margin-top:24px;">
+      <div class="text">
+        <h3>Digital vs. physical impact (simplified)</h3>
+        <table style="width:100%; border-collapse:collapse; font-size:12pt;">
+          <thead>
+            <tr>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Layer</th>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Examples</th>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Digital</td>
+              <td>Servers, cloud storage, recommendation models</td>
+              <td>Electricity use, hardware manufacturing, data-hungry design</td>
+            </tr>
+            <tr>
+              <td>Physical</td>
+              <td>Farms, mills, factories, warehouses, shipping</td>
+              <td>Water use, chemical impact, labour conditions, logistics emissions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text">
+        <p>
+          The rest of this page moves between these layers, asking how they
+          reinforce each other — and where there is room to slow things down.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 2: ALGORITHMIC ACCELERATION -->
+  <section>
+    <div class="chapter-label">chapter two</div>
+    <h2>Algorithmic Acceleration: Why Trends Shrink in Time</h2>
+
+    <div class="two-column">
+      <div class="text">
+        <p>
+          Fashion once moved in seasons. Designers showed collections twice a
+          year; buyers placed orders; clothes filtered into stores. Now,
+          trend cycles can be measured in weeks or even days. Platforms read
+          what we click on, pause on and share, and use that information to
+          push similar images to millions of people at once.
+        </p>
+        <p>In simplified form, the loop looks like this:</p>
+        <ul>
+          <li>A silhouette or colour spikes in engagement on social platforms.</li>
+          <li>Algorithms amplify it to more users who behave similarly.</li>
+          <li>Suppliers receive signals and rush out lookalike versions.</li>
+          <li>E-commerce sites highlight “trending” pieces, reinforcing demand.</li>
+        </ul>
+
+        <p>
+          Consultancy analyses suggest that if nothing changes, fashion’s
+          emissions could rise sharply by 2030. At the same time, other
+          research shows that most brands could reduce their greenhouse gas
+          emissions by more than half for a cost of around one to two percent
+          of revenue by focusing on energy-efficient production, cleaner
+          materials and better planning.
+        </p>
+      </div>
+
+      <figure style="flex:1 1 320px;">
+        <img
+          src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200&auto=format&fit=crop"
+          alt="Clothing rail with similar garments suggesting fast-moving trends"
+          style="max-width:100%;border-radius:14px;"
+        />
+        <figcaption>
+          A wall of near-identical garments is often the end-point of a very
+          fast feedback loop. Photo: Unsplash.
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3 style="margin-top:24px;">Fast vs. slower fashion models</h3>
+    <div class="two-column">
+      <div class="text">
+        <table style="width:100%; border-collapse:collapse; font-size:12pt;">
+          <thead>
+            <tr>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Model</th>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Typical pattern</th>
+              <th style="border-bottom:1px solid #ccc; text-align:left;">Risks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ultra-fast trend cycle</td>
+              <td>New drops weekly, algorithm-led design, limited transparency</td>
+              <td>Overproduction, waste, worker pressure, trend fatigue</td>
+            </tr>
+            <tr>
+              <td>Deliberate / circular</td>
+              <td>Smaller runs, repair and resale built-in, clearer supply chains</td>
+              <td>Higher upfront costs, slower growth, needs patient storytelling</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text">
+        <p>
+          Some brands are testing the slower model: seasonless collections,
+          investment in traceable fibres, or digital passports that show where
+          materials came from. Others still chase the metrics of pure volume.
+          The same data that drives overproduction could also be used to plan
+          fewer, better-made items — but only if the goal shifts from
+          “sell as much as possible” to “sell enough, for longer”.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 3: HUMAN IMPACT OF THE TREND CYCLE -->
+  <section>
+    <div class="chapter-label">chapter three</div>
+    <h2>Too Many Trends: Human Costs of the Infinite Wardrobe</h2>
+
+    <div class="two-column">
+      <div class="text">
+        <p>
+          An accelerated trend cycle isn’t only an environmental issue; it
+          reshapes how people feel in their own clothes. Interviews with Gen Z
+          shoppers describe a constant sense of being “behind” — that by the
+          time they save up for a look they like, the feed has already moved on.
+        </p>
+        <p>Common themes include:</p>
+        <ul>
+          <li>A feeling that style is a test you are always about to fail.</li>
+          <li>Pressure to buy pieces that photograph well even if they don’t last.</li>
+          <li>Confusion about what counts as “good taste” when everything cycles so fast.</li>
+          <li>Exhaustion from trying to track micro-trends across multiple platforms.</li>
+        </ul>
+        <p>
+          At the production end, workers experience a different form of tempo:
+          shorter lead times, last-minute order changes, and expectations that
+          factories will absorb the risks of overstock or cancellations.
+          Sustainability here is not just about emissions and water, but the
+          pace at which human beings are asked to design, sew, ship and perform.
+        </p>
+      </div>
+
+      <figure style="flex:1 1 320px;">
+        <img
+          src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop"
+          alt="Young person looking at their phone surrounded by clothes"
+          style="max-width:100%;border-radius:14px;"
+        />
+        <figcaption>
+          Many young shoppers describe feeling “outdated” within weeks of
+          buying something new. Photo: Unsplash.
+        </figcaption>
+      </figure>
+    </div>
+
+    <p style="margin-top:16px;">
+      One response to this burnout has been a renewed interest in personal
+      uniform dressing, thrifting and repeating outfits on purpose. These
+      aren’t only aesthetic decisions; they are small refusals of a system
+      that treats identity as something that expires on a monthly basis.
+    </p>
+  </section>
+
+  <!-- CHAPTER 4: WARDROBE AS WATERSHED -->
+  <section>
+    <div class="chapter-label">chapter four</div>
+    <h2>Your Wardrobe as a Watershed</h2>
+
+    <div class="two-column">
+      <div class="text">
+        <p>
+          If the digital system decides what we want, the material system is
+          what it takes to make it real. Life-cycle assessments of clothing
+          highlight a few especially intense stages: growing and processing
+          fibres, dyeing and finishing fabrics, and energy use in mills and
+          factories. These are also the stages where brands have the biggest
+          opportunity to cut emissions.
+        </p>
+        <p>
+          Thinking of your wardrobe as a small watershed can be helpful. Each
+          garment has drawn on:
+        </p>
+        <ul>
+          <li>Water for irrigation, processing and repeated home washing.</li>
+          <li>Land for fibre crops or grazing animals.</li>
+          <li>Fossil fuels for synthetics, transport and heating.</li>
+          <li>Human labour and technical knowledge at every step.</li>
+        </ul>
+      </div>
+
+      <figure style="flex:1 1 320px;">
+        <img
+          src="/mnt/data/0650672f-44e7-40da-9e10-bc6e8b0d8941.png"
+          alt="Worker supervising fibre processing on an industrial production line"
+          style="max-width:100%;border-radius:14px;"
+        />
+        <figcaption>
+          Fibre processing in a textile mill; each stage has water, energy and
+          labour embedded in it. Photo: project-supplied factory image.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="two-column" style="margin-top:24px;">
+      <div class="text">
+        <h3>Different fibres, different stories</h3>
+        <ul>
+          <li>
+            <strong>Cotton</strong>: Renewable but often water- and
+            pesticide-intensive, especially in dry regions without careful
+            irrigation.
+          </li>
+          <li>
+            <strong>Polyester / nylon</strong>: Durable and cheap, but derived
+            from fossil fuels and associated with microplastic shedding.
+          </li>
+          <li>
+            <strong>Viscose / rayon</strong>: Made from wood pulp; historically
+            linked to deforestation and toxic processing, though some producers
+            now use certified forests and closed-loop chemical systems.
+          </li>
+          <li>
+            <strong>Lyocell (e.g. TENCEL)</strong>: A newer cellulosic fibre
+            typically produced with more carefully managed solvents.
+          </li>
+          <li>
+            <strong>Wool and leather</strong>: Long-lasting, but connected to
+            land-use impacts and animal welfare.
+          </li>
+        </ul>
+      </div>
+
+      <div class="text">
+        <p>
+          Brands across price points are experimenting here: from luxury houses
+          investing in regenerative agriculture and next-generation fibres, to
+          smaller labels that work with deadstock fabrics, artisan weavers and
+          natural dyes. The wardrobe becomes the place where all of these
+          experiments either succeed or stall — depending on how long garments
+          are actually kept and used.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 5: CIRCULAR DESIGN & BRANDS -->
+  <section class="dark-section">
+    <div class="chapter-label">chapter five</div>
+    <h2>Circular Design and Digital Tools</h2>
+
+    <div class="two-column">
+      <div class="text">
+        <p>
+          Circular fashion asks a simple question with complicated answers:
+          instead of treating clothes as linear “take-make-discard” objects,
+          how do we keep materials in use for as long as possible?
+        </p>
+        <p>
+          Luxury and mainstream brands are experimenting with different
+          approaches. A few examples:
+        </p>
+        <ul>
+          <li>
+            <strong>Stella McCartney</strong> invests in material innovation,
+            from regenerated nylon to mycelium-based leather alternatives, and
+            has long refused fur and exotic skins.
+          </li>
+          <li>
+            <strong>Gucci</strong> and other Kering brands test collections
+            made with recycled polyester, organic cotton and bio-based
+            materials, supported by clearer impact reporting.
+          </li>
+          <li>
+            <strong>Burberry</strong> donates surplus fabrics to design schools
+            and runs capsule lines using recycled fibres, pairing heritage
+            patterns with new material flows.
+          </li>
+          <li>
+            <strong>Chanel</strong> has launched a recycling platform focused
+            on turning its own production waste into high-quality materials for
+            future collections, treating circularity as long-term infrastructure.
+          </li>
+        </ul>
+      </div>
+
+      <figure style="flex:1 1 320px;">
+        <img
+          src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+          alt="Industrial machinery and sorted textiles suggesting circular processing"
+          style="max-width:100%;border-radius:14px;"
+        />
+        <figcaption>
+          Circular initiatives aim to keep fibres moving through repair, reuse,
+          and recycling instead of straight to landfill. Photo: Unsplash.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="two-column" style="margin-top:24px;">
+      <div class="text">
+        <h3>How tech supports circularity</h3>
+        <ul>
+          <li>Resale and rental platforms catalog millions of garments.</li>
+          <li>Digital product passports store fibre and care information.</li>
+          <li>
+            Computer vision tools help sort textiles by colour and material in
+            recycling facilities.
+          </li>
+          <li>
+            Data dashboards allow brands to see where unsold stock piles up —
+            and design it out in future seasons.
+          </li>
+        </ul>
+      </div>
+
+      <div class="text">
+        <p>
+          None of these tools are perfect. Some rely on new kinds of labour;
+          others are limited to higher-priced segments of the market. But they
+          show that technology is not only capable of speeding up consumption.
+          It can also be used to slow things down, connect garments to new
+          owners, and make it easier to see where waste is being created in the
+          first place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER 6: GLOSSARY -->
+  <section>
+    <div class="chapter-label">chapter six</div>
+    <h2>Glossary: Where Fashion and Systems Meet</h2>
+
+    <p>
+      These terms appear in conversations about technology and sustainability
+      in fashion. They describe parts of the system that are often hidden from
+      everyday view but shape how clothes move through the world.
+    </p>
+
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="glossary-term">Dark warehouse</div>
+        <div class="glossary-definition">
+          A highly automated warehouse that can operate with very few workers on
+          site, sometimes literally with the lights off. In fashion, dark
+          warehouses store and sort products for rapid delivery, guided by data
+          from online orders and demand forecasts. They can increase efficiency,
+          but also concentrate power and obscure working conditions.
+        </div>
+      </div>
+
+      <div class="glossary-item">
+        <div class="glossary-term">SKU explosion</div>
+        <div class="glossary-definition">
+          “SKU” stands for stock-keeping unit, a unique code for each product.
+          When brands offer many variations of colour, cut, length and fit, the
+          number of SKUs can grow dramatically. This “explosion” makes
+          forecasting harder and can increase waste when items do not sell,
+          because each micro-variation is produced in smaller, riskier amounts.
+        </div>
+      </div>
+
+      <div class="glossary-item">
+        <div class="glossary-term">Data labelling for style</div>
+        <div class="glossary-definition">
+          The process of tagging garments or images with labels such as
+          “oversized blazer”, “mid-rise”, or “floral print.” These labels help
+          algorithms recognise patterns in style and power search filters,
+          recommendations and automated trend analysis. Behind every neat filter
+          in an app lies a mix of human and machine labour deciding what counts
+          as which style.
+        </div>
+      </div>
+
+      <div class="glossary-item">
+        <div class="glossary-term">Digital twin (supply chain)</div>
+        <div class="glossary-definition">
+          A digital twin is a virtual model of a real-world system. In fashion,
+          a digital twin of a supply chain might show how materials move from
+          farms to mills, factories, warehouses and stores, allowing companies
+          to test changes virtually before making them. Used well, digital
+          twins can make it easier to test circular or lower-impact scenarios
+          before committing to real-world changes.
+        </div>
+      </div>
+
+      <div class="glossary-item">
+        <div class="glossary-term">Embodied energy of computing</div>
+        <div class="glossary-definition">
+          The total energy required to build, run and cool digital hardware.
+          When we shop online, this embodied energy forms part of the impact,
+          even though it is rarely counted in traditional fashion sustainability
+          metrics. It includes the servers that host product images, the
+          networks that move data and the devices in our hands.
+        </div>
+      </div>
+
+      <div class="glossary-item">
+        <div class="glossary-term">Circular design loops</div>
+        <div class="glossary-definition">
+          Design strategies that plan from the start for reuse, repair, resale
+          and recycling. Instead of a straight line from production to landfill,
+          circular loops aim to keep garments circulating through different
+          forms of use for as long as possible. In a truly circular system,
+          digital records and physical design work together so that materials
+          can be recovered and re-used rather than lost.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sustainable Fashion Project — Sustainability Page.</p>
+  </footer>
+</body>
+</html>
