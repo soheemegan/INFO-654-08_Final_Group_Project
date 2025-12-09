@@ -460,3 +460,16 @@ section, article, .glossary-grid {
   margin: 0 auto 10px auto !important; /* centers the logo */
   display: block !important;
 }
+
+
+/* Universal Image Styling (except logo) */
+.content-image {
+  width: 100%;
+  max-width: 700px;   /* adjust if group wants smaller/larger */
+  height: 420px;      /* consistent crop */
+  object-fit: cover;  /* trims but keeps the aesthetic */
+  border-radius: 6px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #22181C;  /* your aesthetic border */
+  }
