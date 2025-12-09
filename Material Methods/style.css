@@ -313,3 +313,150 @@ section, article, .glossary-grid {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+/* ==========================================================
+   TIMELINE PAGE — SAFE NAMESPACE VERSION (won’t break others)
+   ========================================================== */
+
+#timeline-page {
+  padding-top: 30px;
+}
+
+/* Main wrapper */
+#timeline-page .timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Timeline list */
+#timeline-page .timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Timeline line */
+#timeline-page .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+/* Individual event */
+#timeline-page .timeline-event {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Event dot */
+#timeline-page .timeline-event::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5A0001;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Date box */
+#timeline-page .timeline-date {
+  width: 100px;
+  text-align: center;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+/* Content box */
+#timeline-page .timeline-content {
+  flex-grow: 1;
+  padding-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #22181C;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Photos inside boxes */
+#timeline-page .photo {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-top: 15px;
+  border: 1px solid #22181C;
+}
+
+#timeline-page .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes them all same crop */
+  display: none;
+}
+
+#timeline-page .photo img.active {
+  display: block;
+}
+
+/* Clickable boxes wrapper */
+#timeline-page .boxes-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Clickable box */
+#timeline-page .box-container {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #22181C;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+#timeline-page .box-container:hover {
+  background: #fdf3f6;
+}
+
+
+
+
+/* Fix logo styling — remove borders, shadows, margins, resize, and center it */
+.site-logo img {
+  max-width: 120px !important;
+  width: 120px !important;
+  height: auto !important;
+
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  margin: 0 auto 10px auto !important; /* centers the logo */
+  display: block !important;
+}
