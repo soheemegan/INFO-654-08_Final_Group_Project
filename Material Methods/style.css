@@ -188,3 +188,112 @@ footer {
    color: var(--bright-red);
    margin-bottom: 6px;
 }
+
+
+
+
+
+
+/* ---------- GLOBAL ---------- */
+/* ===== TABLE ===== */
+
+.info-section {
+  text-align: center;
+}
+
+.info-section h2 {
+  color: #5A0001;
+  margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border: 2px solid #F45B69;
+}
+
+th,
+td {
+  padding: 1rem;
+  border: 1px solid #F45B69; /* full grid lines */
+  text-align: left;
+  color: #22181C;
+  vertical-align: top;
+}
+
+th {
+  background-color: #F45B69;
+  color: #F6E8EA;
+}
+
+tr:nth-child(even) td {
+  background-color: #F6E8EA;
+}
+
+
+/* ===== GLOBAL IMAGE STYLE ===== */
+figure {
+  text-align: center;
+  margin: 30px auto;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+
+  /* make ALL images same width everywhere */
+  max-width: 350px;     /* adjust this number if needed */
+  width: 100%;          /* responsive */
+  height: auto;         /* keeps correct proportions */
+  border-radius: 6px;
+}
+
+figure figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #5A0001;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ---------- GLOBAL UNIFORM IMAGE CROPPING ---------- */
+
+figure {
+  text-align: center;
+  margin: 30px auto;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+
+  width: 350px;        /* FIXED width */
+  height: 350px;       /* FIXED height */
+  object-fit: cover;   /* CROPS the image cleanly */
+  object-position: center; /* keeps crop centered */
+  border-radius: 6px;
+}
+
+figure figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #5A0001;
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+/* ---------- GLOBAL IMAGE RESET FOR ENTIRE SITE ---------- */
+
+img {
+  display: block;
+  margin: 20px auto;
+  width: 350px;          /* fixed width for consistency */
+  height: 350px;         /* fixed height for consistency */
+  object-fit: cover;     /* crop to fit */
+  object-position: center;
+  border-radius: 6px;
+  border: 2px solid #F45B69;  /* lock the border for ALL images */
+}

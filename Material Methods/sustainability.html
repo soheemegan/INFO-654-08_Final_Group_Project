@@ -3,35 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Material Methods</title>
+  <title>Sustainability in Fashion</title>
 
-    <!-- Google Font: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-
-<!-- MAIN CONTENT WRAPPER -->
-<div class="container">
-
 <body>
-  <!-- ===== HEADER ===== -->
-  <header id="header">
-    <h1>Material Methods</h1>
-  </header>
-
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVIGATION -->
   <nav>
+    <div class="logo">Sustainable Fashion</div>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="timeline.html">Timeline</a></li>
-      <li><a href="platform.html">Platform</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="evolution.html">Shopping Evolution</a></li>
+      <li><a href="platforms.html">Platforms</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
@@ -445,9 +438,47 @@
     </div>
   </section>
 
-  <!-- CHAPTER 6: GLOSSARY -->
+<!-- CHAPTER 6: True cost of Fashion -->
   <section>
-    <div class="chapter-label">chapter six</div>
+  <div class="chapter-label">chapter six</div>
+  <h2>True cost of Fashion</h2>
+
+ <section>
+  <div class="truecost-container">
+    <h2 class="truecost-title">Select Brand & Year</h2>
+
+    <!-- INPUT ROW -->
+    <div class="truecost-input-row">
+      <label for="brandSelect">Brand</label>
+      <select id="brandSelect" disabled>
+        <option>Loading…</option>
+      </select>
+
+      <label for="yearSelect">Year</label>
+      <select id="yearSelect" disabled>
+        <option>Loading…</option>
+      </select>
+
+      <button id="showButton" onclick="fetchData()" disabled>Show Data</button>
+    </div>
+
+    <div id="status" class="truecost-status"></div>
+
+    <!-- RESULTS -->
+    <div class="truecost-results">
+      <h2>Results</h2>
+      <div id="result">
+        <p class="note">Choose a brand and year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+  
+
+<!-- CHAPTER 7: GLOSSARY -->
+  <section>
+    <div class="chapter-label">chapter seven</div>
     <h2>Glossary: Where Fashion and Systems Meet</h2>
 
     <p>
@@ -531,5 +562,109 @@
   <footer>
     <p>© 2025 Sustainable Fashion Project — Sustainability Page.</p>
   </footer>
+
+
+<!-- Scripts for CSV -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+<script>
+let dataset = [];
+
+window.addEventListener("DOMContentLoaded", () => loadCsv());
+
+function setLoadingState(isLoading, msg) {
+  document.getElementById("status").textContent = msg;
+  document.getElementById("showButton").disabled = isLoading;
+  document.getElementById("brandSelect").disabled = isLoading;
+  document.getElementById("yearSelect").disabled = isLoading;
+}
+
+function loadCsv() {
+  setLoadingState(true, "Loading CSV…");
+  Papa.parse("https://raw.githubusercontent.com/uparekh9295/true-cost-fashion/refs/heads/main/true_cost_fast_fashion.csv", {
+    download: true,
+    header: true,
+    dynamicTyping: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      dataset = results.data || [];
+      populateDropdowns();
+      setLoadingState(false, "CSV loaded from GitHub.");
+    },
+error: function(err) {
+    console.error(err);
+    setLoadingState(false, "Error loading CSV from GitHub.");
+  }
+  });
+}
+
+function populateDropdowns() {
+  const brandSelect = document.getElementById("brandSelect");
+  const yearSelect = document.getElementById("yearSelect");
+
+  brandSelect.innerHTML = '<option value="">-- Select brand --</option>';
+  yearSelect.innerHTML = '<option value="">-- Select year --</option>';
+
+  [...new Set(dataset.map(r => r.Brand))].filter(Boolean).sort()
+    .forEach(b => brandSelect.innerHTML += `<option value="${b}">${b}</option>`);
+
+  [...new Set(dataset.map(r => r.Year))].filter(Boolean).sort()
+    .forEach(y => yearSelect.innerHTML += `<option value="${y}">${y}</option>`);
+}
+
+function formatNumber(n) {
+  return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+}
+
+function fetchData() {
+  const brand = document.getElementById("brandSelect").value;
+  const year = document.getElementById("yearSelect").value;
+  const resultEl = document.getElementById("result");
+
+  const rows = dataset.filter(r => String(r.Brand) === brand && String(r.Year) === year);
+
+  if (!rows.length) {
+    resultEl.innerHTML = '<p>No matching data.</p>';
+    return;
+  }
+
+  const fields = [
+    "Carbon_Emissions_tCO2e",
+    "Water_Usage_Million_Litres",
+    "Landfill_Waste_Tonnes",
+    "Sustainability_Score"
+  ];
+
+  const sums = {};
+  fields.forEach(field => {
+    let total = 0;
+    let found = false;
+    rows.forEach(row => {
+      let v = row[field];
+      if (typeof v === "string") {
+        v = v.replace(/,/g, "").trim();
+        v = parseFloat(v);
+      }
+      if (typeof v === "number" && !isNaN(v)) {
+        total += v;
+        found = true;
+      }
+    });
+    sums[field] = found ? total : null;
+  });
+
+  let html = `<div><strong>${brand} – ${year}</strong></div>
+  <table><thead><tr><th>Metric</th><th>Sum</th></tr></thead><tbody>`;
+  fields.forEach(f => {
+    let val = sums[f];
+    val = val === null ? "—" : formatNumber(Math.round(val));
+    html += `<tr><td>${f}</td><td>${val}</td></tr>`;
+  });
+ 
+
+  html += "</tbody></table>";
+  resultEl.innerHTML = html;
+
+}
+</script>
 </body>
 </html>
